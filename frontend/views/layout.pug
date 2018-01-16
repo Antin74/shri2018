@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		title Template
+		meta(name='viewport', content='width=device-width,initial-scale=1')
+		base(href='.')
+		link(rel='stylesheet', href='css/style.css')
+		link(rel='stylesheet', href='css/style-mobile.css', media='screen and (max-width: 650px)')
+		script(src='js/jquery-3.2.1.min.js')
+		script(src='js/main.js')
+	body
+		.header
+			.logo
+			.hidden-mobile
+				button.btn.btn-blue(type='button', data-act='show-edit-meet') Создать встречу
+		include schedule.pug
+		include edit-page.pug

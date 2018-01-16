@@ -1,0 +1,73 @@
+#page-edit-meet
+	.block-2col-in-1.title-page
+		span#title-edit-meet Редактирование встречи
+		span.icon-close(data-act='show-index')
+	.block-2col-in-1.flex-block-col
+		.input-group
+			label Тема:
+			input.full-width(type='text')
+		.group-date-time
+			#group-input-date.input-group
+				label Дата
+				input.full-width(type='text')
+			.group-time
+				.input-group
+					label Начало
+					input.full-width(type='text')
+				.input-group
+					label Конец
+					input.full-width(type='text')
+	.block-2col-in-1.flex-block-col
+		.input-group
+			label Участники
+			input.full-width.input-participant(type='text')
+			.block-2col-in-1.select-participant-wrap
+				.select-participant
+					<!-- заполняются автоматически -->
+			#peoples.chosen-participant
+				.one-participant
+					span.avatar
+					|               Лекс Лютер
+					span.icon-close(data-act='del-elem')
+				.one-participant
+					span.avatar
+					|               Томас Андерсон
+					span.icon-close
+				.one-participant
+					span.avatar
+					|               Дарт Вейдер
+					span.icon-close
+		.block-reserve
+			label Ваша переговорка
+			.one-room.active
+				span.time 16:00-16:30
+				|             Готем . 4 этаж
+				span.icon-close
+			.one-room
+				span.time 16:00-16:30
+				|             Поле непаханное . 4 этаж
+			.one-room
+				span.time 16:00-16:30
+				|             Тёмная башня . 4 этаж
+	.footer
+		button.btn.btn-grey(type='button' data-act='show-index') Отмена
+		button.btn.btn-blue(type='button' data-act='show-save-meet') Создать встречу
+// /div.container
+#messDelMeet.container-modal
+	.modal
+		.icon-maska-cancel
+		.title
+			| Встреча будет удалена безвозвратно
+		.area-btn
+			input.btn.btn-grey(type='button', value='Отмена')
+			input.btn.btn-grey(type='button', value='Удалить')
+#messCreateMeet.container-modal
+	.modal
+		.icon-success
+		.title
+			| Встреча создана!
+		.text
+			p 14 декабря, 15:00-17:00
+			p Готэм · 4 этаж
+		.area-btn
+			input.btn.btn-blue(type='button', value='Хорошо')
